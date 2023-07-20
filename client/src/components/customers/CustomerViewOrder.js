@@ -41,19 +41,6 @@ const CustomerViewOrders = () => {
     }
   };
 
-  const fetchOrders = async () => {
-    try {
-      const ordersResponse = await axios.get('/api/orders/vieworder');
-      return ordersResponse.data;
-    } catch (error) {
-      throw new Error('Failed to retrieve orders.');
-    }
-  };
-
-
-
-
-    
   const handleReceivedOrder = async (orderId, setOrders) => {
     try {
       // Get the order details
